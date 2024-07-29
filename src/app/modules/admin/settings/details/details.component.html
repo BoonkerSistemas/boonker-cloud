@@ -1,0 +1,105 @@
+<div class="w-full max-w-3xl">
+
+
+    <!-- Section -->
+    <div class="w-full">
+        <div class="text-xl">Información General</div>
+
+            <b>{{ project.name }}</b>!
+
+    </div>
+
+
+    <div class="row">
+
+
+        <div class=" grid sm:grid-cols-2">
+
+            <div class="grid col-span-1">
+                <div class="grid col-span-6">
+                    <div>
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:building-office-2'"
+                            matPrefix></mat-icon>
+                        <mat-label><b>Constructor:</b> {{ project.client[0].name }}   {{ project.client[0].lastName }}</mat-label>
+
+                    </div>
+                    <!-- Company -->
+
+                </div>
+
+                <div class="grid col-span-6">
+                    <div>
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:map'"
+                            matPrefix></mat-icon>
+                        <mat-label><b>Ubicación:</b>  {{ project.location }}</mat-label>
+
+                    </div>
+                    <!-- Company -->
+
+                </div>
+
+                <div class="grid col-span-6">
+                    <div>
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:building-office-2'"
+                            matPrefix></mat-icon>
+                        <mat-label><b>Tipo de Proyecto:</b> {{ project.type }}</mat-label>
+
+                    </div>
+                    <!-- Company -->
+
+                </div>
+
+                <div class="grid col-span-6">
+                    <div>
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:calendar'"
+                            matPrefix></mat-icon>
+                        <mat-label><b>Fecha de Inicio:</b> {{ project.startDate | date  }}</mat-label>
+
+                    </div>
+                    <!-- Company -->
+
+                </div>
+                <div class="grid col-span-6">
+                    <div>
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:calendar-days'"
+                            matPrefix></mat-icon>
+                        <mat-label><b>Fecha de Finalización:</b> {{ project.startDate | date }}</mat-label>
+
+                    </div>
+                    <!-- Company -->
+
+                </div>
+                <div class="grid col-span-6">
+                    <div>
+                        <mat-icon
+                            class="icon-size-5"
+                            [svgIcon]="'heroicons_solid:calendar-days'"
+                            matPrefix></mat-icon>
+                        <mat-label><b>Fecha de Inicio Garantía:</b> {{ project.startDate | date }}</mat-label>
+
+                    </div>
+                    <!-- Company -->
+
+                </div>
+
+            </div>
+
+
+            <div class="col-span-1">
+
+                <img [src]="project.picture" height="300px"> <br>
+                <img [src]="project.client[0].picture " height="200px">
+            </div>
+        </div>
+    </div>
+</div>
